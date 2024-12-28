@@ -1,0 +1,61 @@
+
+Pipeline Structure Diagram
+Below is a textual representation of the pipeline structure. For a visual diagram, you can use tools like draw.io, Lucidchart, or any diagramming software
+
+
+
++-------------------+
+|                   |
+|   Start Pipeline  |
+|                   |
++---------+---------+
+          |
+          v
++---------+---------+
+|                   |
+|  Web Scraping     |
+|  (scrapper.py)    |
+|                   |
++---------+---------+
+          |
+          v
++---------+---------+
+|                   |
+|  Data Processing  |
+|  (preprocess.py)  |
+|                   |
++---------+---------+
+          |
+          v
++---------+---------+
+|                   |
+|  Dataset Generation|
+|  (chatbot_data.py)|
+|                   |
++---------+---------+
+          |
+          v
++---------+---------+
+|                   |
+|  End Pipeline     |
+|                   |
++-------------------+
+          |
+          v
++---------+---------+
+|                   |
+|  Chatbot          |
+|  (chatbot.py)     |
+|                   |
++---------+---------+
+
+Explanation:
+Start Pipeline: Initiates the pipeline process.
+Web Scraping (scrapper.py): Scrapes the website content and saves it to scraped_data.json.
+Data Processing (preprocess.py): Processes the raw scraped data into a structured format and saves it to processed_data.json.
+Dataset Generation (chatbot_data.py): Generates Q&A pairs from the structured data using the Groq API and saves the dataset to chatbot_dataset.json.
+End Pipeline: Marks the completion of the pipeline process.
+
+next you need to manually run the chatbot.py
+
+Chatbot (chatbot.py): Uses the generated dataset to interact with users, providing intelligent responses.

@@ -1,0 +1,52 @@
+Here's an enhanced version of your instructions:
+
+---
+
+## Automated Pipeline Usage Instructions
+
+### **Run the Entire Pipeline**
+To scrape data, preprocess it, and prepare it for chatbot integration in one go, execute the following command:
+```bash
+python pipeline.py
+```
+- This command will sequentially:
+  1. Scrape data from the provided website link.
+  2. Preprocess the scraped data.
+  3. Prepare the data for use by the chatbot.
+
+**Note:** You will be prompted to input the URL of the website you wish to scrape.
+
+Once the data pipeline is complete, you can start the chatbot by running:
+```bash
+python chatbot.py
+```
+The chatbot uses **Groq** as the backend to process queries and respond effectively.
+
+---
+
+### **Run Components Individually**
+If you prefer to run each step independently, execute the following commands in sequence:
+
+1. **Scrape data from a website:**
+   ```bash
+   python scrapper.py
+   ```
+   Enter the URL of the website when prompted.
+
+2. **Preprocess the scraped data:**
+   ```bash
+   python preprocess.py
+   ```
+
+3. **Prepare the chatbot dataset:**
+   ```bash
+   python chatbot_data.py
+   ```
+
+Finally, launch the chatbot:
+```bash
+python chatbot.py
+```
+
+This approach allows more control over individual stages of the process.
+
