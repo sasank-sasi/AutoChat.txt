@@ -1,4 +1,4 @@
-# Website Chatbot Project
+# AutoChat.txt
 
 ## Project Overview
 AI-powered pipeline that scrapes website content and Creates Chat Bot based on that data which can be used to provide intelligent responses for user queries regarding that site.
